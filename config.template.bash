@@ -32,7 +32,6 @@ PYP_ORTHO_THRESHOLDS+=" 0.99" # hard core
 PYP_USE_GBLOCKS=no # use ClipKIT for trimming master alignments
 
 PYP_TREE_THRESHOLDS= # defaults to ${ORTHO_THRESHOLDS}
-PYP_TREE_THRESHOLDS+=" 0.99" # hard core
 
 # ------------------------------------------------------------------------
 
@@ -41,6 +40,23 @@ ENABLE_ROARY=1
 ROARY_ARGS=
 ROARY_ARGS+=" -cd 99" # hard core
 #ROARY_ARGS+=" -cd 95" # soft core
+
+# ------------------------------------------------------------------------
+
+ENABLE_PANAROO=1
+
+PANAROO_ARGS=
+
+#PANAROO_ARGS+=" --clean-mode strict --remove-invalid-genes"
+
+PANAROO_ARGS+=" --clean-mode sensitive" # "Very rare plasmids are
+					# difficult to distinguish
+					# from contamination. "
+
+#PANAROO_ARGS+=" --merge_paralogs"
+
+PANAROO_ARGS+=" -a core --core_threshold 0.99" # generate a hard core gene alignment
+#PANAROO_ARGS+=" -a core --core_threshold 0.95" # generate a soft core gene alignment
 
 # ------------------------------------------------------------------------
 

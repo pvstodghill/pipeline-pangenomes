@@ -106,3 +106,4 @@ export LC_ALL=C
 INPUTS=${DATA}/1_inputs
 PYP=${DATA}/2_pyp
 ROARY=${DATA}/3_roary
+PANAROO=${DATA}/4_panaroo
