@@ -31,6 +31,17 @@ cat ${GENOMES}/metadata.tsv | (
 	    continue
 	fi
 
+	if [ "${INPUTS_CLUSTER}" ] ; then
+	    if ( grep "\<${INPUTS_CLUSTER}\>" ${GENOMES}/clusters.txt \
+		     | grep -qs "\<${NAME}\>" )
+	    then
+		: nop
+	    else
+		echo 1>&2 "## skipping $NAME (INPUTS_CLUSTER=${INPUTS_CLUSTER})"
+		continue
+	    fi
+	fi
+		
 	if [ "${INPUTS_REMOVE_REDUNDENT}" ] ; then
 	    case "$NAME" in
 		*~)

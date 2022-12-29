@@ -9,10 +9,11 @@ GENOMES=FIXME # Points to results of pipeline-genomes
 # ------------------------------------------------------------------------
 
 # Criteria for selecting genomes for analysis
-INPUTS_REMOVE_REDUNDENT=1
-INPUTS_BUSCO_DB=enterobacterales
-INPUTS_BUSCO_C=95
-INPUTS_BUSCO_D=5
+#INPUTS_CLUSTER=FIXME
+#INPUTS_REMOVE_REDUNDENT=1
+#INPUTS_BUSCO_DB=enterobacterales
+#INPUTS_BUSCO_C=95
+#INPUTS_BUSCO_D=5
 
 # ------------------------------------------------------------------------
 
