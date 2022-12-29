@@ -4,7 +4,35 @@
 
 # ------------------------------------------------------------------------
 
-# FIXME
+GENOMES=FIXME # Points to results of pipeline-genomes
+
+# ------------------------------------------------------------------------
+
+# Criteria for selecting genomes for analysis
+INPUTS_REMOVE_REDUNDENT=1
+INPUTS_BUSCO_DB=enterobacterales
+INPUTS_BUSCO_C=95
+INPUTS_BUSCO_D=5
+
+# ------------------------------------------------------------------------
+
+ENABLE_PYP=1 # Run pyparanoid
+
+## "minimum size of groups, defaults to 2 which ignores singletons,
+## set to 1 to include singleton"
+#PYP_BUILDGROUPS_THRESHOLD=1 # needed for "cloud pangenome"
+
+# These thresholds are "strictly greater than"
+PYP_ORTHO_THRESHOLDS=
+PYP_ORTHO_THRESHOLDS+=" 0.99" # hard core
+#PYP_ORTHO_THRESHOLDS+=" 0.95" # soft core
+#PYP_ORTHO_THRESHOLDS+=" 0.15" # shell
+
+# PYP_USE_GBLOCKS=yes # use GBlocks for trimming master alignments
+PYP_USE_GBLOCKS=no # use ClipKIT for trimming master alignments
+
+PYP_TREE_THRESHOLDS= # defaults to ${ORTHO_THRESHOLDS}
+PYP_TREE_THRESHOLDS+=" 0.99" # hard core
 
 # ------------------------------------------------------------------------
 
