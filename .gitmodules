@@ -7,3 +7,6 @@
 [submodule "scripts"]
 	path = scripts
 	url = ../scripts.git
+[submodule "Assembly-Dereplicator"]
+	path = Assembly-Dereplicator
+	url = https://github.com/rrwick/Assembly-Dereplicator.git

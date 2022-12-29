@@ -15,6 +15,11 @@ GENOMES=FIXME # Points to results of pipeline-genomes
 #INPUTS_BUSCO_C=95
 #INPUTS_BUSCO_D=5
 
+# Criteria for pruning high-similar genomes
+#INPUTS_DEREPLICATOR_ARGS="--distance 0.001" # prune slightly
+#INPUTS_DEREPLICATOR_ARGS="--distance 0.025" # approx one assembly per species/subspecies
+#INPUTS_DEREPLICATOR_ARGS="--count 100" # choose the distance adaptively
+
 # ------------------------------------------------------------------------
 
 ENABLE_PYP=1 # Run pyparanoid

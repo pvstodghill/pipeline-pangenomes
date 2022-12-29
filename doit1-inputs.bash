@@ -83,7 +83,31 @@ cat ${GENOMES}/metadata.tsv | (
 )
     
 
+# ------------------------------------------------------------------------
+# Running dereplicator.py
+# ------------------------------------------------------------------------
 
+if [ "${INPUTS_DEREPLICATOR_ARGS}" ] ; then
+
+    echo 1>&2 '# Running dereplicator.py'
+
+    mv ${INPUTS} ${INPUTS}.tmp
+
+    mkdir ${INPUTS}.old
+    cp --archive ${INPUTS}.tmp/*.fna ${INPUTS}.old/
+    python ${PIPELINE}/Assembly-Dereplicator/dereplicator.py \
+	   ${INPUTS_DEREPLICATOR_ARGS} \
+	   ${INPUTS}.old ${INPUTS}
+
+    for FNA in ${INPUTS}/*.fna ; do
+	NAME=$(basename $FNA .fna)
+	cp --archive ${INPUTS}.tmp/${NAME}.faa ${INPUTS}/${NAME}.faa
+	cp --archive ${INPUTS}.tmp/${NAME}.gff ${INPUTS}/${NAME}.gff
+    done
+
+    rm -rf ${INPUTS}.tmp ${INPUTS}.old
+
+fi
 
 # ------------------------------------------------------------------------
 # Done.
