@@ -103,5 +103,4 @@ export LC_ALL=C
 
 # ------------------------------------------------------------------------
 
-INPUTS=${DATA}/00_inputs
-FIXME=${DATA}/01_FIXME
+INPUTS=${DATA}/1_inputs
