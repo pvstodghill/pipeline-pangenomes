@@ -17,7 +17,7 @@ mkdir -p ${ROARY}
 # ------------------------------------------------------------------------
 
 echo 1>&2 '# Run Roary'
-roary -e -mafft -p ${THREADS} -f ${ROARY}/ -r ${INPUTS}/*.gff
+roary -e -mafft -p ${THREADS} -f ${ROARY}/ -r ${INPUTS}/*.gff ${ROARY_ARGS}
 
 # ------------------------------------------------------------------------
 # Run FastTreeMP

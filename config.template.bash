@@ -38,6 +38,10 @@ PYP_TREE_THRESHOLDS+=" 0.99" # hard core
 
 ENABLE_ROARY=1
 
+ROARY_ARGS=
+ROARY_ARGS+=" -cd 99" # hard core
+#ROARY_ARGS+=" -cd 95" # soft core
+
 # ------------------------------------------------------------------------
 
 # Uncomment to get packages from HOWTO
