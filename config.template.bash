@@ -36,6 +36,10 @@ PYP_TREE_THRESHOLDS+=" 0.99" # hard core
 
 # ------------------------------------------------------------------------
 
+ENABLE_ROARY=1
+
+# ------------------------------------------------------------------------
+
 # Uncomment to get packages from HOWTO
 PACKAGES_FROM=howto
 

@@ -2,6 +2,11 @@
 
 . $(dirname ${BASH_SOURCE[0]})/doit-preamble.bash
 
+if [ -z "${ENABLE_ROARY}" ] ; then
+    echo 1>&2 '# Skipping.'
+    exit
+fi
+
 # ------------------------------------------------------------------------
 
 rm -rf ${ROARY}
